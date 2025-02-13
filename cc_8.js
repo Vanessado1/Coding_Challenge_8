@@ -13,3 +13,19 @@ const calculateDiscount = (price, discountRate) => {
 }
 console.log(`Final Price: $${calculateDiscount(100, 0.2)}`); // Expected output: "Final Price: $80.00"
 console.log(`Final Price: $${calculateDiscount(250, 0.15)}`); // Expected output: "Final Price: $212.50"
+
+// Task 3: Arrow Function 
+// declared a function to calculate service fees based off of service types 
+const calculateServiceFee = (amount, serviceType) => {
+    let serviceFee = 0;
+    if (serviceType === "Premium") {
+        serviceFee = 0.15;
+    } else if (serviceType === "Standard") {
+        serviceFee = 0.10;
+    } else {
+        serviceFee = 0.05;
+    }
+    return amount * serviceFee;
+}
+console.log(`Service Fee: $${calculateServiceFee(200, "Premium")}`);// Expected output: "Service Fee: $30.00"
+console.log(`Service Fee: $${calculateServiceFee(500, "Standard")}`); // Expected output: "Service Fee: $50.00"
