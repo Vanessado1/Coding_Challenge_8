@@ -27,7 +27,8 @@ const calculateServiceFee = (amount, serviceType) => {
     } else {
         serviceFee = 0.05;
     }
-    return amount * serviceFee;
+    totalCost = amount * serviceFee;
+    return totalCost.toFixed(2);
 }
 console.log(`Service Fee: $${calculateServiceFee(200, "Premium")}`);// Expected output: "Service Fee: $30.00"
 console.log(`Service Fee: $${calculateServiceFee(500, "Standard")}`); // Expected output: "Service Fee: $50.00"
